@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @{
+        Layout = "~/Views/_BasicLayout.cshtml";
+        ViewBag.Title = "Главная";
+    }
+</head>
+<body>
+    <div>
+        @{
+            Layout = "~/Views/_BasicLayout.cshtml";
+            ViewBag.Title = "Главная";
+        }
+        <div>
+            @ViewBag.Greeting, спасибо, что зашли
+                <p>
+                    @Html.ActionLink("Введите имя", "InputData")    
+                </p>
+        </div>
+    </div>
+</body>
+</html>
