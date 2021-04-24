@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "CreateStudent";
+}
+
+<h2>VIEW - New student add.</h2>
+
+<h3>Existing students list</h3>
+
+<table class="table">
+    <tr>
+        <td><p>Surname</p></td>
+        <td><p>Name</p></td>
+        <td><p>Group number</p></td>
+        <td><p>Course</p></td>
+        <td><p>Grade</p></td>
+    </tr> @foreach (var c in ViewBag.Students)
+    {
+<tr>
+        <td><p>@c.Surname</p></td>
+        <td><p>@c.Name</p></td>
+        <td><p>@c.GroupId</p></td>
+        <td><p>@c.Course</p></td>
+        <td><p>@c.Grade</p></td>
+</tr>
+    }
+</table>
+
+<h3>New students add form.</h3>
+
+<form method="post" action="">
+    <table class="table-bordered">
+        <tr>
+            <td><p>Surname</p></td>
+            <td><input type="text" name="Surname" /></td>
+        </tr>
+        <tr>
+            <td><p>Name</p></td>
+            <td><input type="text" name="Name" /></td>
+        </tr>
+        <tr>
+            <td><p>Group number</p></td>
+            <td><input type="text" name="GroupId" /></td>
+        </tr>
+        <tr>
+            <td><p>Course</p></td>
+            <td><input type="text" name="Course" /></td>
+        </tr>
+        <tr>
+            <td><p>Grade</p></td>
+            <td><input type="text" name="Grade" /></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+

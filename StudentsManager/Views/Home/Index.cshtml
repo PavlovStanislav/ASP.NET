@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>All student`s grades on programming:</h3>
+        <table class="table-bordered">
+            <tr>
+                <td><p>Surname</p></td>
+                <td><p>Name</p></td>
+                <td><p>Group number</p></td>
+                <td><p>Course</p></td>
+                <td><p>Grade</p></td>
+
+            </tr>
+            @foreach (var c in ViewBag.Students)
+            {
+        <tr>
+                <td><p>@c.Surname</p></td>
+                <td><p>@c.Name</p></td>
+                <td><p>@c.GroupId</p></td>
+                <td><p>@c.Course</p></td>
+                <td><p>@c.Grade</p></td>
+        </tr>
+            }
+        </table>
+    </div>
+    <p>
+
+    </p>
+</div>
+

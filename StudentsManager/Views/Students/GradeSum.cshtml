@@ -1,0 +1,29 @@
+﻿@model StudentsManager.Models.Student
+
+@{
+    ViewBag.Title = "Rank";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sum</h2>
+<h3>Students</h3>
+
+<table class="table">
+    <tr>
+        <td><p>Grades sum:    </p></td>
+    </tr>
+    @foreach (var item in ViewBag.Students)
+    {
+        <tr>
+            <td><p>@item.Surname</p></td>
+            <td><p>@item.Grade</p></td>
+        </tr>
+
+    }
+    <tr>
+
+        <td><p> TotalAmount : @ViewBag.sum </p></td>
+    </tr>
+</table>
+
+
